@@ -23,3 +23,7 @@ def test_mul_two_numbers():
     c = Calc()
     res = c.mul(1, 5)
     assert res == 5
+
+def test_mul_many_numbers():
+    s = range(1, 10)
+    assert Calc().mul(*s) == 362880
