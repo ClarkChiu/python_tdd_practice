@@ -8,7 +8,4 @@ class Calc:
         return a - b
 
     def mul(self, *args):
-        def mul2(a, b):
-            return a * b
-        
-        return reduce(mul2, args)
+        return reduce(lambda x, y: x * y, args)
