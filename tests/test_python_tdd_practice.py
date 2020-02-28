@@ -32,3 +32,8 @@ def test_div_two_numbers():
     c = Calc()
     res = c.div(11, 5)
     assert res == 2.2
+
+def test_div_by_zero_returns_inf():
+    c = Calc()
+    res = c.div(11, 0)
+    assert res == 'inf'
