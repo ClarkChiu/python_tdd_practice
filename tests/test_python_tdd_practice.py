@@ -13,3 +13,8 @@ def test_add_three_numbers():
 def test_add_many_numbers():
     s = range(100)
     assert Calc().add(*s) == 4950
+
+def test_subtrace_two_numbers():
+    c = Calc()
+    res = c.sub(10, 3)
+    assert res == 7
