@@ -18,3 +18,8 @@ def test_subtrace_two_numbers():
     c = Calc()
     res = c.sub(10, 3)
     assert res == 7
+
+def test_mul_two_numbers():
+    c = Calc()
+    res = c.mul(1, 5)
+    assert res == 5
