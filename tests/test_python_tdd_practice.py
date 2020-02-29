@@ -1,3 +1,4 @@
+import pytest
 from python_tdd_practice.calc import Calc
 
 def test_add_two_numbers():
@@ -37,3 +38,9 @@ def test_div_by_zero_returns_inf():
     c = Calc()
     res = c.div(11, 0)
     assert res == 'inf'
+
+def test_mul_by_zero_raises_exception():
+    c = Calc()
+
+    with pytest.raises(ValueError):
+        c.mul(10, 0)
