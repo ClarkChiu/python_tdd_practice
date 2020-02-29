@@ -44,3 +44,8 @@ def test_mul_by_zero_raises_exception():
 
     with pytest.raises(ValueError):
         c.mul(10, 0)
+
+def test_avg_correct_average():
+    c = Calc()
+    res = c.avg([2, 5, 12, 98])
+    assert res == 29.25
