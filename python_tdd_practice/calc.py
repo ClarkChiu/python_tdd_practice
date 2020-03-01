@@ -19,15 +19,15 @@ class Calc:
             return 'inf'
 
     def avg(self, numbers, ut=None, lt=None):
-        if not len(numbers):
+        _it = numbers[:]
+
+        if lt:
+            _it = [x for x in _it if x >= lt]
+
+        if ut:
+            _it = [x for x in _it if x <= ut]
+
+        if not len(_it):
             return 0
 
-        if not ut:
-            ut = max(numbers)
-
-        if not lt:
-            lt = min(numbers)
-
-        new_list = [x for x in numbers if x <= ut and x>=lt]
-
-        return sum(new_list)/len(new_list)
+        return sum(_it)/len(_it)
