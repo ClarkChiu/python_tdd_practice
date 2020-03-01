@@ -19,6 +19,9 @@ class Calc:
             return 'inf'
 
     def avg(self, numbers, ut=None, lt=None):
+        if not len(numbers):
+            return 0
+
         if not ut:
             ut = max(numbers)
 
