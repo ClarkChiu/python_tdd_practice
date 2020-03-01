@@ -18,10 +18,13 @@ class Calc:
         except ZeroDivisionError:
             return 'inf'
 
-    def avg(self, numbers, ut=None):
+    def avg(self, numbers, ut=None, lt=None):
         if not ut:
             ut = max(numbers)
 
-        new_list = [x for x in numbers if x <= ut]
+        if not lt:
+            lt = min(numbers)
+
+        new_list = [x for x in numbers if x <= ut and x>=lt]
 
         return sum(new_list)/len(new_list)

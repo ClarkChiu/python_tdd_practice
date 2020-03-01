@@ -54,3 +54,8 @@ def test_avg_removes_upper_outliers():
     c = Calc()
     res = c.avg([2, 5, 12, 98], ut=90)
     assert res == pytest.approx(6.333333)
+
+def test_avg_removes_lower_outliers():
+    c = Calc()
+    res = c.avg([2, 5, 12, 98], lt=10)
+    assert res == pytest.approx(55)
